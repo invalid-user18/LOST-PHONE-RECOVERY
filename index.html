@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SREERAG VS - Lost Phone Recovery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+```
+<!-- Language Selection -->
+<div id="language-screen" class="screen active">
+    <h1>🌍 Choose Your Language</h1>
+    <button onclick="setLanguage('ml')">മലയാളം</button>
+<button onclick="setLanguage('en')">English</button>
+<button onclick="setLanguage('hi')">हिन्दी</button>
+<button onclick="setLanguage('ta')">தமிழ்</button>
+</div>
+
+<!-- Welcome -->
+<div id="welcome-screen" class="screen">
+    <h2 id="welcome-title">Have We Met Before?</h2>
+    <p id="welcome-text">
+        If you're seeing this, this phone may be lost.
+        Thank you for taking a moment to help.
+    </p>
+
+    <button onclick="startFlow('yes')">✅ Yes</button>
+    <button onclick="startFlow('no')">❌ No</button>
+</div>
+
+<!-- Location -->
+<div id="location-screen" class="screen">
+    <h2 id="location-title">📍 Where did you find this phone?</h2>
+    <input type="text" id="location" placeholder="Enter location">
+    <button onclick="nextScreen('name-screen')">Continue</button>
+</div>
+
+<!-- Name -->
+<div id="name-screen" class="screen">
+    <h2 id="name-title">👤 What's your name?</h2>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="nextScreen('phone-screen')">Continue</button>
+</div>
+
+<!-- Phone -->
+<div id="phone-screen" class="screen">
+    <h2 id="phone-title">📱 How can I contact you?</h2>
+    <input type="tel" id="phone" placeholder="Enter phone number">
+    <button id="phone-next-btn">Continue</button>
+</div>
+
+<!-- Message Screen (NO flow only) -->
+<div id="message-screen" class="screen">
+    <h2  id="message-title">💬 Anything you'd like to tell the owner?</h2>
+    <textarea id="message" rows="5"></textarea>
+    <button onclick="submitForm()">Submit</button>
+</div>
+
+<!-- Final Screen -->
+<div id="final-screen" class="screen">
+    <h1  id="thank-title">❤️ Thank You</h1>
+
+    <p>Thank you for your help.
+Please contact the owner using the details below.</p>
+
+    <div class="contact-box">
+        <h3>SREERAG VS</h3>
+
+        <p>📞 Phone Number</p>
+        <a href="tel:+917559061232">
+            9567595037
+        </a>
+
+        <p>💬 WhatsApp</p>
+        <a href="https://wa.me/917559061232" target="_blank">
+            Open WhatsApp
+        </a>
+
+        <p>📸 Instagram</p>
+        <a href="https://instagram.com/invalid_user.18" target="_blank">
+            @invalid_user.18
+        </a>
+
+        <p>📧 Email</p>
+        <a href="mailto:sreeragvs187@gmail.com">
+            sreeragvs187@gmail.com
+        </a>
+    </div>
+</div>
+```
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
