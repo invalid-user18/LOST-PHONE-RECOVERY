@@ -91,7 +91,6 @@ function getLocation() {
 
                 gpsLocation = `https://maps.google.com/?q=${lat},${lon}`;
 
-                alert("GPS Saved:\n" + gpsLocation);
 
             },
             function(error) {
