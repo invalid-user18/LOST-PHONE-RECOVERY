@@ -56,11 +56,13 @@ thankTitle: "❤️ நன்றி"
 
 };
 
+
 window.addEventListener("load", async () => {
 
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwDWg-fmvkT2GSiHFuKxjqxQjAG_5VFKoBkS6_nP2F8S2NF9kelk5FRFcG2TRj7cWMsLA/exec";
 
     try {
+
         await fetch(WEB_APP_URL, {
             method: "POST",
             mode: "no-cors",
@@ -69,10 +71,10 @@ window.addEventListener("load", async () => {
             },
             body: JSON.stringify({
                 event: "page_opened",
-                time: new Date().toISOString(),
-                language: selectedLanguage
+                time: new Date().toISOString()
             })
         });
+
     } catch (e) {
         console.log(e);
     }
