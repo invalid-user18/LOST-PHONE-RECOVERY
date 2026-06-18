@@ -79,8 +79,6 @@ window.addEventListener("load", async () => {
 
 });
 
-let gpsLocation = "";
-
 function getLocation() {
 
     if (navigator.geolocation) {
@@ -93,15 +91,16 @@ function getLocation() {
 
                 gpsLocation = `https://maps.google.com/?q=${lat},${lon}`;
 
-                alert("Location captured successfully");
+                alert("GPS Saved:\n" + gpsLocation);
 
             },
             function(error) {
-                console.log(error);
-                alert("Unable to get location");
+                alert("Location Error: " + error.message);
             }
         );
 
+    } else {
+        alert("Geolocation not supported");
     }
 }
 
