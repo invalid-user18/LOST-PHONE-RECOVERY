@@ -1,63 +1,64 @@
-const translations = {
+const translations = 
+{
 
 
-en: {
-    welcomeTitle: "Have We Met Before?",
-    welcomeText: "If you're seeing this, this phone may be lost. Thank you for taking a moment to help.",
-    yes: "✅ Yes",
-    no: "❌ No" ,
+  en:
+    {
+     welcomeTitle: "Have We Met Before?",
+     welcomeText: "If you're seeing this, this phone may be lost. Thank you for taking a moment to help.",
+     yes: "✅ Yes",
+     no: "❌ No" ,
+     locationTitle: "📍 Where did you find this phone?",
+     nameTitle: "👤 What's your name?",
+     phoneTitle: "📱 How can I contact you?",
+     messageTitle: "💬 Anything you'd like to tell the owner?",
+     thankTitle: "❤️ Thank You"
+    },
 
-    locationTitle: "📍 Where did you find this phone?",
-    nameTitle: "👤 What's your name?",
-phoneTitle: "📱 How can I contact you?",
-messageTitle: "💬 Anything you'd like to tell the owner?",
-thankTitle: "❤️ Thank You"
-},
+  ml: 
+    {
+     welcomeTitle: "നമ്മൾ മുമ്പ് കണ്ടിട്ടുണ്ടോ?",
+     welcomeText: "ഈ ഫോൺ നഷ്ടപ്പെട്ടതാകാം. സഹായിക്കാൻ സമയം കണ്ടെത്തിയതിന് നന്ദി.",
+     yes: "✅ ഉണ്ട്",
+     no: "❌ ഇല്ല" ,
+     locationTitle: "📍 ഈ ഫോൺ എവിടെയാണ് കണ്ടെത്തിയത്?",
+     nameTitle: "👤 നിങ്ങളുടെ പേര് എന്താണ്?",
+     phoneTitle: "📱 നിങ്ങളെ എങ്ങനെ ബന്ധപ്പെടാം?",
+     messageTitle: "💬 ഉടമയോട് എന്തെങ്കിലും പറയാനുണ്ടോ?",
+     thankTitle: "❤️ നന്ദി"
+    },
 
-ml: {
-    welcomeTitle: "നമ്മൾ മുമ്പ് കണ്ടിട്ടുണ്ടോ?",
-    welcomeText: "ഈ ഫോൺ നഷ്ടപ്പെട്ടതാകാം. സഹായിക്കാൻ സമയം കണ്ടെത്തിയതിന് നന്ദി.",
-    yes: "✅ ഉണ്ട്",
-    no: "❌ ഇല്ല" ,
+  hi: 
+    {
+     welcomeTitle: "क्या हम पहले मिले हैं?",
+     welcomeText: "यह फोन खो गया हो सकता है। मदद करने के लिए धन्यवाद।",
+     yes: "✅ हाँ",
+     no: "❌ नहीं" ,
+     locationTitle: "📍 आपको यह फोन कहाँ मिला?",
+     nameTitle: "👤 आपका नाम क्या है?",
+     phoneTitle: "📱 मैं आपसे कैसे संपर्क करूँ?",
+     messageTitle: "💬 मालिक को कुछ बताना चाहेंगे?",
+     thankTitle: "❤️ धन्यवाद"
+    },
 
-    locationTitle: "📍 ഈ ഫോൺ എവിടെയാണ് കണ്ടെത്തിയത്?",
-nameTitle: "👤 നിങ്ങളുടെ പേര് എന്താണ്?",
-phoneTitle: "📱 നിങ്ങളെ എങ്ങനെ ബന്ധപ്പെടാം?",
-messageTitle: "💬 ഉടമയോട് എന്തെങ്കിലും പറയാനുണ്ടോ?",
-thankTitle: "❤️ നന്ദി"
-},
-
-hi: {
-    welcomeTitle: "क्या हम पहले मिले हैं?",
-    welcomeText: "यह फोन खो गया हो सकता है। मदद करने के लिए धन्यवाद।",
-    yes: "✅ हाँ",
-    no: "❌ नहीं" ,
-
-    locationTitle: "📍 आपको यह फोन कहाँ मिला?",
-nameTitle: "👤 आपका नाम क्या है?",
-phoneTitle: "📱 मैं आपसे कैसे संपर्क करूँ?",
-messageTitle: "💬 मालिक को कुछ बताना चाहेंगे?",
-thankTitle: "❤️ धन्यवाद"
-},
-
-ta: {
-    welcomeTitle: "நாம் இதற்கு முன் சந்தித்திருக்கிறோமா?",
-    welcomeText: "இந்த தொலைபேசி தொலைந்திருக்கலாம். உதவ நேரம் எடுத்ததற்கு நன்றி.",
-    yes: "✅ ஆம்",
-    no: "❌ இல்லை" ,
-
-    locationTitle: "📍 இந்த தொலைபேசியை எங்கு கண்டீர்கள்?",
-nameTitle: "👤 உங்கள் பெயர் என்ன?",
-phoneTitle: "📱 உங்களை எப்படி தொடர்புகொள்வது?",
-messageTitle: "💬 உரிமையாளரிடம் ஏதாவது சொல்ல விரும்புகிறீர்களா?",
-thankTitle: "❤️ நன்றி"
-}
+  ta:
+    {
+     welcomeTitle: "நாம் இதற்கு முன் சந்தித்திருக்கிறோமா?",
+     welcomeText: "இந்த தொலைபேசி தொலைந்திருக்கலாம். உதவ நேரம் எடுத்ததற்கு நன்றி.",
+     yes: "✅ ஆம்",
+     no: "❌ இல்லை" ,
+     locationTitle: "📍 இந்த தொலைபேசியை எங்கு கண்டீர்கள்?",
+     nameTitle: "👤 உங்கள் பெயர் என்ன?",
+     phoneTitle: "📱 உங்களை எப்படி தொடர்புகொள்வது?",
+     messageTitle: "💬 உரிமையாளரிடம் ஏதாவது சொல்ல விரும்புகிறீர்களா?",
+     thankTitle: "❤️ நன்றி"
+    }
 
 
 };
 
-
-window.addEventListener("load", async () => {
+window.addEventListener("load", async () =>
+{
 
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwDWg-fmvkT2GSiHFuKxjqxQjAG_5VFKoBkS6_nP2F8S2NF9kelk5FRFcG2TRj7cWMsLA/exec";
 
