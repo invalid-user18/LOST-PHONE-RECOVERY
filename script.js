@@ -169,6 +169,63 @@ function nextScreen(screenId) {
     showScreen(screenId);
 }
 
+/* 👇 IVIDE PASTE CHEYYU */
+
+function checkLocation() {
+
+    const location = document.getElementById("location").value.trim();
+
+    if (location === "") {
+        alert("Please enter the location.");
+        return;
+    }
+
+    if (location.length < 3) {
+        alert("Please enter a valid location.");
+        return;
+    }
+
+    nextScreen("name-screen");
+}
+
+function checkName() {
+
+    const name = document.getElementById("name").value.trim();
+
+    if (name === "") {
+        alert("Please enter your name.");
+        return;
+    }
+
+    if (name.length < 3) {
+        alert("Name must be at least 3 characters.");
+        return;
+    }
+
+    nextScreen("phone-screen");
+}
+
+function checkPhone() {
+
+    const phone = document.getElementById("phone").value.trim();
+
+    if (phone === "") {
+        alert("Please enter your phone number.");
+        return;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+    }
+
+    if (flowType === "yes") {
+        showScreen("appreciation-screen");
+    } else {
+        showScreen("message-screen");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const phoneNextBtn = document.getElementById("phone-next-btn");
 
@@ -206,18 +263,23 @@ async function submitForm() {
 
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwDWg-fmvkT2GSiHFuKxjqxQjAG_5VFKoBkS6_nP2F8S2NF9kelk5FRFcG2TRj7cWMsLA/exec";
 
-    try {
+   try {
 
-        await fetch(WEB_APP_URL, {
-           method: "POST",
-         mode: "no-cors",
-         headers: {
+    showScreen("loading-screen");
+
+    await fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
             "Content-Type": "text/plain"
-  },
-  body: JSON.stringify(data)
-});
+        },
+        body: JSON.stringify(data)
+    });
 
-showScreen("final-screen");
+    setTimeout(() => {
+        showScreen("final-screen");
+    }, 2000);
+
 
     } catch (error) {
 
@@ -225,10 +287,9 @@ showScreen("final-screen");
         console.error(error);
 
     }
-}
+
 showScreen("language-screen");
 
 function testButton() {
     alert("Button Working");
-}
-    
+}}

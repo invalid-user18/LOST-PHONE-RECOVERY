@@ -48,21 +48,21 @@
     <h2 id="location-title">📍 Where did you find this phone?</h2>
     <input type="text" id="location" placeholder="Enter location">
     <button onclick="getLocation()">📍 Share Current Location</button>
-    <button onclick="nextScreen('name-screen')">Continue</button>
+    <button onclick="checkLocation()">Continue</button>
 </div>
 
 <!-- Name -->
 <div id="name-screen" class="screen">
     <h2 id="name-title">👤 What's your name?</h2>
     <input type="text" id="name" placeholder="Enter your name">
-    <button onclick="nextScreen('phone-screen')">Continue</button>
+    <button onclick="checkName()">Continue</button>
 </div>
 
 <!-- Phone -->
 <div id="phone-screen" class="screen">
     <h2 id="phone-title">📱 How can I contact you?</h2>
     <input type="tel" id="phone" placeholder="Enter phone number">
-    <button id="phone-next-btn">Continue</button>
+    <button onclick="checkPhone()">Continue</button>
 </div>
 
 <!-- Appreciation Screen -->
@@ -82,6 +82,12 @@
     <h2  id="message-title">💬 Anything you'd like to tell the owner?</h2>
     <textarea id="message" rows="5"></textarea>
     <button onclick="submitForm()">Submit</button>
+</div>
+
+<div id="loading-screen" class="screen">
+    <div class="loader"></div>
+    <h2>⏳ Sending Information...</h2>
+    <p>Please wait</p>
 </div>
 
 <!-- Final Screen -->
