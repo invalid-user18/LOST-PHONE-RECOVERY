@@ -166,13 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const phoneNextBtn = document.getElementById("phone-next-btn");
 
     if (phoneNextBtn) {
-        phoneNextBtn.addEventListener("click", () => {
-            if (flowType === "yes") {
-                submitForm();
-            } else {
-                showScreen("message-screen");
-            }
-        });
+      phoneNextBtn.addEventListener("click", () => {
+
+    if (flowType === "yes") {
+        showScreen("appreciation-screen");
+    } else {
+        showScreen("message-screen");
+    }
+
+});
+
+
+
     }
 
     showScreen("language-screen");
