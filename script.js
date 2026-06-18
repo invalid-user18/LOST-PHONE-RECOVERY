@@ -81,6 +81,7 @@ window.addEventListener("load", async () => {
 
 function getLocation() {
 
+
     if (navigator.geolocation) {
 
         navigator.geolocation.getCurrentPosition(
@@ -91,7 +92,8 @@ function getLocation() {
 
                 gpsLocation = `https://maps.google.com/?q=${lat},${lon}`;
 
-                
+                console.log("GPS:", gpsLocation);
+
 
             },
             function(error) {
@@ -104,6 +106,7 @@ function getLocation() {
     }
 }
 
+let gpsLocation = "";
 let selectedLanguage = "en";
 let flowType = "";
 
@@ -155,6 +158,7 @@ showScreen("welcome-screen");
 
 function startFlow(type) {
     flowType = type;
+    getLocation();
     showScreen("location-screen");
 }
 
