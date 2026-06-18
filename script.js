@@ -91,12 +91,14 @@ function getLocation() {
                 const lat = position.coords.latitude;
                 const lon = position.coords.longitude;
 
-                document.getElementById("location").value =
-                    `https://maps.google.com/?q=${lat},${lon}`;
+                gpsLocation = `https://maps.google.com/?q=${lat},${lon}`;
+
+                alert("Location captured successfully");
 
             },
             function(error) {
                 console.log(error);
+                alert("Unable to get location");
             }
         );
 
@@ -154,7 +156,6 @@ showScreen("welcome-screen");
 
 function startFlow(type) {
     flowType = type;
-    getLocation();
     showScreen("location-screen");
 }
 
@@ -186,6 +187,7 @@ async function submitForm() {
         language: selectedLanguage,
         location: document.getElementById("location")?.value || "",
         gpsLocation: gpsLocation,
+        mapLink: document.getElementById("location").value,
         name: document.getElementById("name")?.value || "",
         phone: document.getElementById("phone")?.value || "",
         message: document.getElementById("message")?.value || "",
@@ -214,7 +216,6 @@ showScreen("final-screen");
     }
 }
 showScreen("language-screen");
-;
 
 function testButton() {
     alert("Button Working");
