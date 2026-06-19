@@ -18,7 +18,7 @@
 
 <div class="container">
 
-```
+
 
 <!-- Language Selection -->
 <div id="language-screen" class="screen active">
@@ -47,34 +47,35 @@
 <div id="location-screen" class="screen">
     <h2 id="location-title">📍 Where did you find this phone?</h2>
     <input type="text" id="location" placeholder="Enter location">
-    <button onclick="getLocation()">📍 Share Current Location</button>
-    <button onclick="checkLocation()">Continue</button>
+    <button id="continue-location-btn" onclick="checkLocation()">Continue</button>
 </div>
 
 <!-- Name -->
 <div id="name-screen" class="screen">
     <h2 id="name-title">👤 What's your name?</h2>
     <input type="text" id="name" placeholder="Enter your name">
-    <button onclick="checkName()">Continue</button>
+    <button id="continue-name-btn" onclick="checkName()">Continue</button>
 </div>
 
 <!-- Phone -->
 <div id="phone-screen" class="screen">
     <h2 id="phone-title">📱 How can I contact you?</h2>
     <input type="tel" id="phone" placeholder="Enter phone number">
-    <button onclick="checkPhone()">Continue</button>
+    <button id="continue-phone-btn" onclick="checkPhone()">Continue</button>
 </div>
 
 <!-- Appreciation Screen -->
 <div id="appreciation-screen" class="screen">
-    <h2>🙏 Thank You</h2>
+    <h2 id="appreciation-title">🙏 Thank You</h2>
 
-    <p>
-        Thank you for taking the time to help return this phone.
-        Your kindness is greatly appreciated.
-    </p>
+<p id="appreciation-text">
+    Thank you for taking the time to help return this phone.
+    Your kindness is greatly appreciated.
+</p>
 
-    <button onclick="submitForm()">Submit Information</button>
+    <button id="submit-btn" onclick="submitForm()">
+    Submit Information
+</button>
 </div>
 
 <!-- Message Screen (NO flow only) -->
@@ -86,17 +87,20 @@
 
 <div id="loading-screen" class="screen">
     <div class="loader"></div>
-    <h2>⏳ Sending Information...</h2>
-    <p>Please wait</p>
+    <h2 id="loading-title">Sending Information...</h2>
+    <p id="loading-screen">
+        Please wait
+    </p>
 </div>
 
 <!-- Final Screen -->
 <div id="final-screen" class="screen">
     <h1  id="thank-title">❤️ Thank You</h1>
 
-    <p>Thank you for your help.
-Please contact the owner using the details below.</p>
-
+    <p id="thank-message">
+Thank you for your help.
+Please contact the owner using the details below.
+</p>
     <div class="contact-box">
         <h3>SREERAG VS</h3>
 

@@ -12,24 +12,39 @@ const translations =
      nameTitle: "👤 What's your name?",
      phoneTitle: "📱 How can I contact you?",
      messageTitle: "💬 Anything you'd like to tell the owner?",
-     thankTitle: "❤️ Thank You"
+     thanktitle: "❤️ Thank You",
+     appreciationTitle: "🙏 Thank You",
+     appreciationText: "Thank you for taking the time to help return this phone. Your kindness is greatly appreciated.",
+     loadingtitle: "📨 Sending Information...",
+     loadingscreen: "Please wait",
+     thankmessage: "Thank you for your help. Please contact the owner using the details below.",
+     continueBtn: "Continue",
+     submitBtn: "Submit information"
     },
 
   ml: 
     {
-     welcomeTitle: "നമ്മൾ മുമ്പ് കണ്ടിട്ടുണ്ടോ?",
+     continueBtn: "തുടരുക",
+     welcomeTitle: "നിങ്ങൾക്ക് എന്നെ അറിയാമോ?",
      welcomeText: "ഈ ഫോൺ നഷ്ടപ്പെട്ടതാകാം. സഹായിക്കാൻ സമയം കണ്ടെത്തിയതിന് നന്ദി.",
-     yes: "✅ ഉണ്ട്",
+     yes: "✅ അറിയാം",
      no: "❌ ഇല്ല" ,
      locationTitle: "📍 ഈ ഫോൺ എവിടെയാണ് കണ്ടെത്തിയത്?",
      nameTitle: "👤 നിങ്ങളുടെ പേര് എന്താണ്?",
      phoneTitle: "📱 നിങ്ങളെ എങ്ങനെ ബന്ധപ്പെടാം?",
-     messageTitle: "💬 ഉടമയോട് എന്തെങ്കിലും പറയാനുണ്ടോ?",
-     thankTitle: "❤️ നന്ദി"
+     messageTitle: "💬 കൂടുതൽ വിവരങ്ങൾ എന്തെങ്കിലും",
+     thanktitle: "❤️ നന്ദി",
+     appreciationTitle: "🙏 നന്ദി",
+     appreciationText: "ഈ ഫോൺ തിരികെ ലഭിക്കാൻ സഹായിച്ചതിന് നന്ദി. നിങ്ങളുടെ സഹായം വളരെ വിലപ്പെട്ടതാണ്.",
+     loadingTitle: "📨 വിവരങ്ങൾ അയക്കുന്നു...",
+     loadingscreen: "കാത്തിരിക്കൂ",
+     thankmessage: "നിങ്ങളുടെ സഹായത്തിന് നന്ദി. താഴെ നൽകിയിരിക്കുന്ന വിവരങ്ങൾ ഉപയോഗിച്ച് ഉടമയെ ബന്ധപ്പെടുക.",
+     submitBtn: "വിവരങ്ങൾ സമർപ്പിക്കുക"
     },
 
   hi: 
     {
+     continueBtn: "जारी रखें",
      welcomeTitle: "क्या हम पहले मिले हैं?",
      welcomeText: "यह फोन खो गया हो सकता है। मदद करने के लिए धन्यवाद।",
      yes: "✅ हाँ",
@@ -38,11 +53,18 @@ const translations =
      nameTitle: "👤 आपका नाम क्या है?",
      phoneTitle: "📱 मैं आपसे कैसे संपर्क करूँ?",
      messageTitle: "💬 मालिक को कुछ बताना चाहेंगे?",
-     thankTitle: "❤️ धन्यवाद"
+     thankTitle: "❤️ धन्यवाद",
+     appreciationTitle: "🙏 धन्यवाद",
+     appreciationText: "इस फोन को वापस दिलाने में मदद करने के लिए धन्यवाद। आपकी सहायता की बहुत सराहना की जाती है।",
+     loadingTitle: "📨 जानकारी भेजी जा रही है...",
+     loadingscreen: "कृपया प्रतीक्षा करें",
+     thankMessage: "आपकी मदद के लिए धन्यवाद। कृपया नीचे दिए गए विवरणों का उपयोग करके मालिक से संपर्क करें।",
+     submitBtn: "जानकारी सबमिट करें"
     },
 
   ta:
     {
+     continueBtn: "தொடரவும்",
      welcomeTitle: "நாம் இதற்கு முன் சந்தித்திருக்கிறோமா?",
      welcomeText: "இந்த தொலைபேசி தொலைந்திருக்கலாம். உதவ நேரம் எடுத்ததற்கு நன்றி.",
      yes: "✅ ஆம்",
@@ -51,7 +73,10 @@ const translations =
      nameTitle: "👤 உங்கள் பெயர் என்ன?",
      phoneTitle: "📱 உங்களை எப்படி தொடர்புகொள்வது?",
      messageTitle: "💬 உரிமையாளரிடம் ஏதாவது சொல்ல விரும்புகிறீர்களா?",
-     thankTitle: "❤️ நன்றி"
+     thankTitle: "❤️ நன்றி",
+     appreciationTitle: "🙏 நன்றி",
+     appreciationText: "இந்த தொலைபேசியை திருப்பித் தர உதவியதற்கு நன்றி. உங்கள் உதவி மிகவும் பாராட்டப்படுகிறது.",
+     submitBtn: "தகவலை சமர்ப்பிக்கவும்"
     }
 
 
@@ -154,6 +179,24 @@ document.getElementById("message-title").innerText =
 document.getElementById("thank-title").innerText =
     translations[lang].thankTitle;
 
+document.getElementById("continue-location-btn").innerText =
+translations[lang].continueBtn;
+
+document.getElementById("continue-name-btn").innerText =
+translations[lang].continueBtn;
+
+document.getElementById("continue-phone-btn").innerText =
+translations[lang].continueBtn;
+
+document.getElementById("appreciation-title").innerText =
+    translations[lang].appreciationTitle;
+
+document.getElementById("appreciation-text").innerText =
+    translations[lang].appreciationText;
+
+document.getElementById("submit-btn").innerText =
+    translations[lang].submitBtn;
+
 showScreen("welcome-screen");
 
 
@@ -169,7 +212,7 @@ function nextScreen(screenId) {
     showScreen(screenId);
 }
 
-/* 👇 IVIDE PASTE CHEYYU */
+
 
 function checkLocation() {
 
@@ -292,4 +335,9 @@ showScreen("language-screen");
 
 function testButton() {
     alert("Button Working");
-}}
+}
+const submitBtn = document.getElementById("submit-btn");
+if (submitBtn) {
+    submitBtn.innerText = translations[lang].submitBtn;
+}
+}
